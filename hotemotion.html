@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DataWebsite</title>
+    <!-- google-fonts -->
+    <link href="css/css2" rel="stylesheet">
+    <link href="css/null_9f7cf1527e734834b5d602cb0bc03151.css2" rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="css/style-liberty.css">
+</head>
+<body>
+<!--header-->
+<header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg stroke">
+            <h1><a class="navbar-brand" href="index.html"> </a></h1>
+            <!-- if logo is image enable this
+                   <a class="navbar-brand" href="#index.html">
+                       <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                   </a> -->
+            <button class="navbar-toggler  collapsed bg-gradient" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                <span class="navbar-toggler-icon fa icon-close fa-times"></span></button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-lg-auto">
+                    <li class="nav-item "><a class="nav-link" href="index.html">信息概览 <span
+                            class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="wordcloud.html">热门词云</a></li>
+                    <li class="nav-item"
+                    "> <a class="nav-link" href="timeline.html">时间趋势</a> </li>
+                    <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        主题分布<span class="fas fa-angle-down"></span> </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="topic.html">主题分布</a>
+                            <a class="dropdown-item" href="hottopic.html">主题与热度</a>
+                            <a class="dropdown-item" href="network.html">共现网络</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                                   role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                                                   aria-expanded="false"> 情感分布<span class="fas fa-angle-down"></span>
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="emotion.html">情感分布</a>
+                            <a class="dropdown-item" href="hotemotion.html">情感与热度</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="toplist.html">热门信息</a></li>
+                    <!--/search-right-->
+                    <ul class="header-search">
+                        <li class="nav-item search-right"><a href="#search" class="btn search-btn btn-light"
+                                                             title="search"><span class="fas fa-search"
+                                                                                  aria-hidden="true"></span></a>
+                            <!-- search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <h3 class="title-w3l two mb-4 text-left">Search Here</h3>
+                                    <form action="#" method="GET" class="search-box d-sm-flex position-relative">
+                                        <input type="search" placeholder="Enter Keyword here" name="search" required
+                                               autofocus>
+                                        <button type="submit" class="btn btn-style btn-primary"> Search</button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close">×</a>
+                            </div>
+                            <!-- /search popup --> </li>
+                    </ul>
+                    <!--//search-right-->
+                </ul>
+            </div>
+            <!-- search button -->
+            <!-- //search button -->
+            <!-- toggle switch for light and dark theme -->
+            <div class="cont-ser-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox"> <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="gg-moon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+            <!-- //toggle switch for light and dark theme -->
+        </nav>
+    </div>
+</header>
+<!--//header-->
+<section class="w3l-about-breadcrumb text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-5 py-md-4">
+            <div class="banner-info-grid px-md-5">
+                <h2 class="w3l-title-breadcrumb mb-3">情感热度</h2>
+                <p class="inner-page-para px-lg-5"> 正面信息传播声量高</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //Services banner -->
+<!-- Why Choose Us Section-->
+<section class="w3l-whychooseus py-5">
+    <div id="container" style="height: 500%"></div>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <!-- Uncomment this line if you want to dataTool extension
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/extension/dataTool.min.js"></script>
+   -->
+    <!-- Uncomment this line if you want to use gl extension
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+   -->
+    <!-- Uncomment this line if you want to echarts-stat extension
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+   -->
+    <!-- Uncomment this line if you want to use map
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+   -->
+    <!-- Uncomment these two lines if you want to use bmap extension
+   <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/extension/bmap.min.js"></script>
+   -->
+    <script type="text/javascript">
+        var dom = document.getElementById('container');
+        var myChart = echarts.init(dom, null, {
+            renderer: 'canvas',
+            useDirtyRect: false
+        });
+        var app = {};
+
+        var option;
+
+        option = {
+            xAxis: {
+                scale: true
+            },
+            yAxis: {
+                scale: true
+            },
+            series: [
+                {
+                    type: 'effectScatter',
+                    symbolSize: 20,
+                    data: [
+                        [0.9903, 1344], [0.9966, 1005],
+                    ]
+                },
+                {
+                    type: 'scatter',
+                    // prettier-ignore
+                    data: [
+                        [0.2167, 0],
+                        [0.9947, 0],
+                        [0.9903, 1344],
+                        [0.8325, 0],
+                        [0.8665, 0],
+                        [0.9892, 0],
+                        [0.9931, 0],
+                        [0.9945, 0],
+                        [0.995, 0],
+                        [0.9447, 0],
+                        [0.9957, 0],
+                        [0.9992, 0],
+                        [0.0594, 0],
+                        [0.9921, 0],
+                        [0.9953, 0],
+                        [0.9975, 0],
+                        [0.9919, 0],
+                        [0.9869, 0],
+                        [0.9982, 0],
+                        [0.9409, 0],
+                        [0.9904, 0],
+                        [0.2863, 5],
+                        [0.9974, 0],
+                        [0.4357, 0],
+                        [0.9896, 0],
+                        [0.4431, 0],
+                        [0.9815, 0],
+                        [0.7482, 0],
+                        [0.9973, 0],
+                        [0.0026, 0],
+                        [0.9959, 0],
+                        [0.9895, 0],
+                        [0.9967, 0],
+                        [0.986, 0],
+                        [0.4561, 0],
+                        [0.9806, 38],
+                        [0.5506, 2],
+                        [0.7216, 0],
+                        [0.8412, 0],
+                        [0.9988, 0],
+                        [0.9858, 0],
+                        [0.9968, 0],
+                        [0.9924, 0],
+                        [0.4534, 0],
+                        [0.9646, 0],
+                        [0.9935, 0],
+                        [0.9748, 0],
+                        [0.0168, 0],
+                        [0.9874, 0],
+                        [0.9895, 0],
+                        [0.2873, 0],
+                        [0.7578, 0],
+                        [0.7521, 0],
+                        [0.9968, 9],
+                        [0.9967, 0],
+                        [0.9953, 24],
+                        [0.6689, 0],
+                        [0.9926, 0],
+                        [0.8885, 0],
+                        [0.9974, 0],
+                        [0.9928, 0],
+                        [0.9214, 3],
+                        [0.9118, 0],
+                        [0.9943, 0],
+                        [0.9984, 0],
+                        [0.6788, 0],
+                        [0.9967, 0],
+                        [0.9985, 0],
+                        [0.9989, 0],
+                        [0.9038, 0],
+                        [0.783, 0],
+                        [0.996, 0],
+                        [0.9937, 0],
+                        [0.9952, 0],
+                        [0.9698, 15],
+                        [0.9976, 12],
+                        [0.9756, 0],
+                        [0.9966, 0],
+                        [0.9987, 0],
+                        [0.6309, 0],
+                        [0.9963, 0],
+                        [0.9952, 0],
+                        [0.6454, 0],
+                        [0.9932, 0],
+                        [0.9529, 0],
+                        [0.3773, 0],
+                        [0.889, 0],
+                        [0.9974, 0],
+                        [0.9295, 0],
+                        [0.9955, 0],
+                        [0.8256, 0],
+                        [0.9976, 0],
+                        [0.8099, 0],
+                        [0.9883, 0],
+                        [0.9518, 1],
+                        [0.9707, 0],
+                        [0.0393, 0],
+                        [0.8403, 0],
+                        [0.9966, 0],
+                        [0.9953, 0],
+                        [0.9595, 0],
+                        [0.2174, 0],
+                        [0.9942, 0],
+                        [0.9979, 0],
+                        [0.9983, 0],
+                        [0.997, 0],
+                        [0.9524, 0],
+                        [0.1352, 0],
+                        [0.9264, 0],
+                        [0.0817, 0],
+                        [0.9877, 0],
+                        [0.8921, 0],
+                        [0.8773, 0],
+                        [0.9368, 0],
+                        [0.9575, 0],
+                        [0.7929, 0],
+                        [0.9948, 0],
+                        [0.9871, 0],
+                        [0.9981, 0],
+                        [0.9917, 0],
+                        [0.9884, 1],
+                        [0.9858, 0],
+                        [0.0181, 0],
+                        [0.0231, 0],
+                        [0.9903, 0],
+                        [0.9623, 0],
+                        [0.5767, 0],
+                        [0.9873, 1],
+                        [0.91, 0],
+                        [0.9981, 0],
+                        [0.9934, 0],
+                        [0.7882, 0],
+                        [0.9975, 0],
+                        [0.9543, 0],
+                        [0.9975, 5],
+                        [0.9613, 0],
+                        [0.9935, 0],
+                        [0.7762, 0],
+                        [0.9887, 0],
+                        [0.9019, 4],
+                        [0.7757, 0],
+                        [0.9978, 2],
+                        [0.9506, 0],
+                        [0.6028, 0],
+                        [0.9642, 0],
+                        [0.9556, 0],
+                        [0.9875, 0],
+                        [0.9923, 0],
+                        [0.0072, 2],
+                        [0.3328, 0],
+                        [0.9977, 0],
+                        [0.9931, 0],
+                        [0.3802, 0],
+                        [0.355, 0],
+                        [0.9772, 0],
+                        [0.9701, 0],
+                        [0.9437, 16],
+                        [0.2452, 0],
+                        [0.9977, 0],
+                        [0.9765, 0],
+                        [0.9969, 0],
+                        [0.9919, 0],
+                        [0.997, 0],
+                        [0.9933, 0],
+                        [0.9849, 0],
+                        [0.9955, 0],
+                        [0.9957, 0],
+                        [0.9914, 0],
+                        [0.9429, 98],
+                        [0.9914, 0],
+                        [0.9964, 1],
+                        [0.9966, 0],
+                        [0.0227, 0],
+                        [0.9988, 0],
+                        [0.9417, 3],
+                        [0.9917, 0],
+                        [0.9926, 2],
+                        [0.9048, 0],
+                        [0.0045, 0],
+                        [0.9942, 0],
+                        [0.9956, 1],
+                        [0.2474, 0],
+                        [0.9927, 0],
+                        [0.9853, 0],
+                        [0.7974, 0],
+                        [0.977, 0],
+                        [0.8058, 0],
+                        [0.9481, 0],
+                        [0.9778, 0],
+                        [0.9971, 0],
+                        [0.9989, 0],
+                        [0.997, 0],
+                        [0.874, 0],
+                        [0.9711, 0],
+                        [0.9975, 0],
+                        [0.6874, 0],
+                        [0.9995, 1],
+                        [0.9951, 0],
+                        [0.5959, 0],
+                        [0.8824, 0],
+                        [0.6319, 0],
+                        [0.9964, 0],
+                        [0.8234, 0],
+                        [0.9453, 0],
+                        [0.9976, 0],
+                        [0.9522, 0],
+                        [0.841, 0],
+                        [0.9929, 1],
+                        [0.8325, 0],
+                        [0.9899, 0],
+                        [0.8919, 1],
+                        [0.995, 0],
+                        [0.9972, 2],
+                        [0.9957, 0],
+                        [0.9876, 0],
+                        [0.3989, 1],
+                        [0.1005, 0],
+                        [0.9957, 0],
+                        [0.9992, 0],
+                        [0.9508, 0],
+                        [0.9983, 2],
+                        [0.9876, 0],
+                        [0.993, 0],
+                        [0.939, 0],
+                        [0.0892, 0],
+                        [0.996, 0],
+                        [0.6409, 0],
+                        [0.9306, 0],
+                        [0.9996, 0],
+                        [0.9967, 0],
+                        [0.8037, 0],
+                        [0.8838, 0],
+                        [0.9983, 0],
+                        [0.9932, 0],
+                        [0.9422, 1],
+                        [0.978, 0],
+                        [0.7191, 0],
+                        [0.6585, 0],
+                        [0.6597, 0],
+                        [0.9832, 6],
+                        [0.9653, 0],
+                        [0.9841, 0],
+                        [0.997, 0],
+                        [0.9756, 5],
+                        [0.9889, 0],
+                        [0.9756, 8],
+                        [0.9893, 2],
+                        [0.9958, 2],
+                        [0.9934, 5],
+                        [0.4565, 0],
+                        [0.9981, 0],
+                        [0.9909, 1],
+                        [0.9897, 0],
+                        [0.9871, 0],
+                        [0.9465, 5],
+                        [0.8882, 2],
+                        [0.9756, 0],
+                        [0.9978, 0],
+                        [0.998, 0],
+                        [0.9524, 0],
+                        [0.9961, 1],
+                        [0.9747, 46],
+                        [0.9959, 597],
+                        [0.9939, 2],
+                        [0.9987, 0],
+                        [0.9926, 2],
+                        [0.9982, 0],
+                        [0.9974, 3],
+                        [0.9789, 111],
+                        [0.9959, 0],
+                        [0.9981, 0],
+                        [0.9973, 0],
+                        [0.0177, 1],
+                        [0.966, 0],
+                        [0.8519, 0],
+                        [0.9884, 0],
+                        [0.9942, 0],
+                        [0.987, 61],
+                        [0.5202, 0],
+                        [0.9772, 0],
+                        [0.9951, 0],
+                        [0.9916, 0],
+                        [0.9968, 0],
+                        [0.0754, 0],
+                        [0.9656, 0],
+                        [0.1644, 0],
+                        [0.9876, 0],
+                        [0.9973, 0],
+                        [0.9962, 0],
+                        [0.9992, 0],
+                        [0.9996, 0],
+                        [0.999, 0],
+                        [0.5186, 2],
+                        [0.9851, 0],
+                        [0.9863, 0],
+                        [0.9894, 0],
+                        [0.996, 0],
+                        [0.963, 0],
+                        [0.9281, 0],
+                        [0.7793, 0],
+                        [0.924, 0],
+                        [0.9991, 2],
+                        [0.9954, 0],
+                        [0.9927, 1],
+                        [0.9965, 0],
+                        [0.9771, 15],
+                        [0.9923, 0],
+                        [0.9992, 0],
+                        [0.9965, 0],
+                        [0.9813, 0],
+                        [0.3189, 0],
+                        [0.6205, 0],
+                        [0.9472, 0],
+                        [0.9969, 2],
+                        [0.9495, 0],
+                        [0.3613, 0],
+                        [0.9983, 0],
+                        [0.956, 0],
+                        [0.9873, 0],
+                        [0.9976, 0],
+                        [0.4393, 0],
+                        [0.97, 0],
+                        [0.5164, 0],
+                        [0.8947, 0],
+                        [0.9957, 230],
+                        [0.9966, 1005],
+                        [0.2221, 0],
+                        [0.9966, 0],
+                        [0.9786, 0],
+                        [0.9912, 0],
+                        [0.989, 0],
+                        [0.9964, 0],
+                        [0.992, 4],
+                        [0.994, 0],
+                        [0.9679, 1],
+                        [0.9989, 0],
+                        [0.9996, 0],
+                        [0.9777, 0],
+                        [0.9796, 2],
+                        [0.9974, 10],
+                        [0.9881, 2],
+                        [0.9244, 0],
+                        [0.9944, 0],
+                        [0.8969, 0],
+                        [0.7757, 0],
+                        [0.9474, 0],
+                        [0.9811, 0],
+                        [0.9811, 1],
+                        [0.9948, 99],
+                        [0.9901, 0],
+                        [0.9979, 0],
+                        [0.9501, 0],
+                        [0.965, 0],
+                        [0.0095, 4],
+                        [0.9864, 0],
+                        [0.995, 0],
+                        [0.9665, 0],
+                        [0.9979, 204],
+                        [0.9597, 0],
+                        [0.91, 0],
+                        [0.6554, 0],
+                        [0.9972, 0],
+                        [0.9862, 0],
+                        [0.9889, 61],
+                        [0.9168, 0],
+                        [0.9917, 0],
+                        [0.0723, 0],
+                        [0.9978, 2],
+                        [0.997, 0],
+                        [0.9901, 0],
+                        [0.9946, 0],
+                        [0.9975, 0],
+                        [0.9889, 0],
+                        [0.0066, 0],
+                        [0.8495, 0],
+                        [0.9805, 0],
+                        [0.9984, 12],
+                        [0.9987, 2],
+                        [0.9991, 0],
+                        [0.0035, 120],
+                        [0.5591, 0],
+                        [0.0431, 22],
+                        [0.9973, 0],
+                        [0.9979, 1],
+                        [0.9959, 0],
+                        [0.9864, 0],
+                        [0.9909, 0],
+                        [0.819, 0],
+                        [0.9984, 0],
+                        [0.9932, 0],
+                        [0.9639, 0],
+                        [0.9993, 22],
+                        [0.9926, 0],
+                        [0.9501, 0],
+                        [0.9916, 0],
+                        [0.9827, 9],
+                        [0.9967, 25],
+                        [0.5603, 0],
+                        [0.1018, 2],
+                        [0.9972, 39],
+                        [0.9828, 0],
+                        [0.9933, 2],
+                        [0.9972, 27],
+                        [0.9279, 0],
+                        [0.6019, 0],
+                        [0.8815, 0],
+                        [0.8015, 6],
+                        [0.9699, 3],
+                        [0.2134, 0],
+                        [0.9944, 0],
+                        [0.9979, 0],
+                        [0.9972, 884],
+                        [0.7752, 1],
+                        [0.9972, 8],
+                        [0.9971, 14],
+                        [0.9985, 0],
+                        [0.9807, 0],
+                        [0.9984, 0],
+                        [0.9947, 0],
+                        [0.9946, 0],
+                        [0.9833, 0],
+                        [0.9968, 0],
+                        [0.9881, 14],
+                        [0.9989, 0],
+                        [0.9968, 0],
+                        [0.9975, 0],
+                        [0.8839, 0],
+                        [0.9471, 0],
+                        [0.7398, 0],
+                        [0.9947, 0],
+                        [0.9962, 0],
+                        [0.9906, 0],
+                        [0.9978, 1],
+                        [0.8177, 68],
+                        [0.95, 115],
+                        [0.92, 0],
+                        [0.9947, 1],
+                        [0.9815, 1],
+                        [0.9832, 0],
+                        [0.9712, 0],
+                        [0.849, 0],
+                        [0.9816, 0],
+                        [0.995, 0],
+                        [0.9948, 0],
+                        [0.9986, 0],
+                        [0.9783, 4],
+                        [0.9645, 0],
+                        [0.9954, 0],
+                        [0.9886, 0],
+                        [0.9959, 6],
+                        [0.9953, 0],
+                        [0.9962, 0],
+                        [0.8667, 0],
+                        [0.9986, 1],
+                        [0.9971, 0],
+                        [0.9984, 52],
+                        [0.9983, 1],
+                        [0.9509, 0],
+                        [0.6685, 2],
+                        [0.9977, 0],
+                        [0.9827, 0],
+                        [0.9985, 0],
+                        [0.9971, 1],
+                        [0.9587, 0],
+                        [0.9964, 0],
+                        [0.9934, 0],
+                        [0.9979, 2],
+                        [0.9975, 1],
+                        [0.9979, 3],
+                        [0.9756, 0],
+                        [0.8227, 0],
+                        [0.5188, 0],
+                        [0.8933, 0],
+                        [0.1031, 0],
+                        [0.9966, 0],
+                        [0.3702, 0],
+                        [0.9916, 0],
+                        [0.912, 0],
+                        [0.9939, 0],
+                        [0.9955, 0],
+                        [0.9926, 1],
+                        [0.9423, 0],
+                        [0.7966, 0],
+                        [0.9973, 1],
+                        [0.9863, 0],
+                        [0.9749, 0],
+                        [0.9668, 0],
+                        [0.7256, 0],
+                        [0.9893, 0],
+                        [0.9953, 0],
+                        [0.9965, 0],
+                        [0.7963, 0],
+                        [0.9985, 0],
+                        [0.9825, 2],
+                        [0.999, 0],
+                        [0.9856, 0],
+                        [0.9923, 0],
+                        [0.9967, 1],
+                        [0.9578, 1],
+                        [0.9955, 0],
+                        [0.5779, 2],
+                        [0.9823, 0],
+                        [0.9931, 2],
+                        [0.9981, 1],
+                        [0.9891, 0],
+                        [0.9855, 0],
+                        [0.9982, 1],
+                        [0.7227, 0],
+                        [0.9983, 0],
+                        [0.994, 0],
+                        [0.9952, 0],
+                        [0.9954, 1],
+                        [0.9985, 0],
+                        [0.6798, 0],
+                        [0.9935, 0],
+                        [0.9972, 0],
+                        [0.9983, 100],
+                        [0.999, 1],
+                        [0.996, 0],
+                        [0.9967, 0],
+
+                    ]
+                }
+            ]
+        };
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+        window.addEventListener('resize', myChart.resize);
+    </script>
+</section>
+<footer class="w3l-footer-29-main">
+    <div class="footer-29 pt-5 pb-4">
+        <div class="container pt-md-4">
+            <!-- copyright -->
+            <p class="copy-footer-29 text-center mt-5 pb-2">22301281 周晓月</p>
+            <!-- //copyright -->
+        </div>
+    </div>
+</footer>
+<!-- //footer block -->
+<!-- Js scripts -->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" title="Go to top"><span class="fas fa-level-up-alt"
+                                                                     aria-hidden="true"></span></button>
+<script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+<!-- //move top -->
+<!-- common jquery.js plugin -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- //common jquery.js plugin -->
+<!-- theme switch js (light and dark)-->
+<script src="js/theme-change.js"></script>
+<!-- //theme switch js (light and dark)-->
+<!--/stats-number-counter-->
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.countup.js"></script>
+<script>
+    $('.counter').countUp();
+
+</script>
+<!--//stats-number-counter-->
+<!--/owlcarousel-->
+<script src="js/owl.carousel.js"></script>
+<!-- //tesimonials-->
+<script>
+    $(document).ready(function () {
+        $("#owl-demo1").owlCarousel({
+            loop: true,
+            nav: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                736: {
+                    items: 1,
+                    nav: false
+                }
+            }
+        })
+    })
+
+</script>
+<!-- //tesimonials-->
+<!-- MENU-JS -->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!-- //MENU-JS -->
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- //disable body scroll which navbar is in active -->
+<!--bootstrap-->
+<script src="js/bootstrap.min.js"></script>
+<!-- //bootstrap-->
+<!-- //Js scripts -->
+</body>
+</html>

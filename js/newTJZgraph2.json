@@ -1,0 +1,777 @@
+{
+  "nodes": [
+    {
+      "category": "名词",
+      "id": "0",
+      "name": "羌族",
+      "symbolSize": 100.0,
+      "value": 565,
+      "x": -266.82776,
+      "y": 299.6904
+    },
+    {
+      "category": "名词",
+      "id": "1",
+      "name": "汶川",
+      "symbolSize": 70.4989154013015,
+      "value": 159,
+      "x": -418.08344,
+      "y": 446.8853
+    },
+    {
+      "category": "名词",
+      "id": "2",
+      "name": "地震",
+      "symbolSize": 65.5097613882863,
+      "value": 157,
+      "x": -212.76357,
+      "y": 245.29176
+    },
+    {
+      "category": "名词",
+      "id": "3",
+      "name": "文化",
+      "symbolSize": 13.4490238611714,
+      "value": 131,
+      "x": -242.82404,
+      "y": 235.26283
+    },
+    {
+      "category": "动词",
+      "id": "4",
+      "name": "北川",
+      "symbolSize": 12.5813449023861,
+      "value": 114,
+      "x": -379.30386,
+      "y": 429.06424
+    },
+    {
+      "category": "名词",
+      "id": "5",
+      "name": "四川",
+      "symbolSize": 10.8459869848156,
+      "value": 112,
+      "x": -417.26337,
+      "y": 406.03506
+    },
+    {
+      "category": "名词",
+      "id": "6",
+      "name": "民族",
+      "symbolSize": 10.8459869848156,
+      "value": 97,
+      "x": -332.6012,
+      "y": 485.16974
+    },
+    {
+      "category": "其他",
+      "id": "7",
+      "name": "小煞",
+      "symbolSize": 8.89370932754881,
+      "value": 81,
+      "x": -382.69568,
+      "y": 475.09113
+    },
+    {
+      "category": "其他",
+      "id": "8",
+      "name": "杨迪",
+      "symbolSize": 8.02603036876356,
+      "value": 80,
+      "x": -320.384,
+      "y": 387.17325
+    },
+    {
+      "category": "动词",
+      "id": "9",
+      "name": "活动",
+      "symbolSize": 7.80911062906724,
+      "value": 78,
+      "x": -344.39832,
+      "y": 451.16772
+    },
+    {
+      "category": "名词",
+      "id": "10",
+      "name": "中国",
+      "symbolSize": 7.37527114967462,
+      "value": 75,
+      "x": -89.34107,
+      "y": 234.56128
+    },
+    {
+      "category": "名词",
+      "id": "11",
+      "name": "阿坝藏族羌族自治州",
+      "symbolSize": 7.37527114967462,
+      "value": 71,
+      "x": -87.93029,
+      "y": -6.8120565
+    },
+    {
+      "category": "名词",
+      "id": "12",
+      "name": "阿坝",
+      "symbolSize": 7.15835140997831,
+      "value": 68,
+      "x": -339.77908,
+      "y": -184.69139
+    },
+    {
+      "category": "名词",
+      "id": "13",
+      "name": "发展",
+      "symbolSize": 7.15835140997831,
+      "value": 54,
+      "x": -194.31313,
+      "y": 178.55301
+    },
+    {
+      "category": "动词",
+      "id": "14",
+      "name": "旅游",
+      "symbolSize": 6.72451193058568,
+      "value": 52,
+      "x": -158.05168,
+      "y": 201.99768
+    },
+    {
+      "category": "名词",
+      "id": "15",
+      "name": "传统",
+      "symbolSize": 6.72451193058568,
+      "value": 51,
+      "x": -127.701546,
+      "y": 242.55057
+    },
+    {
+      "category": "动词",
+      "id": "16",
+      "name": "绵阳",
+      "symbolSize": 6.72451193058568,
+      "value": 50,
+      "x": -385.2226,
+      "y": -393.5572
+    },
+    {
+      "category": "名词",
+      "id": "17",
+      "name": "理县",
+      "symbolSize": 6.29067245119306,
+      "value": 47,
+      "x": -516.55884,
+      "y": -393.98975
+    },
+    {
+      "category": "动词",
+      "id": "18",
+      "name": "生活",
+      "symbolSize": 5.85683297180043,
+      "value": 47,
+      "x": -464.79382,
+      "y": -493.57944
+    },
+    {
+      "category": "名词",
+      "id": "19",
+      "name": "九寨沟",
+      "symbolSize": 5.42299349240781,
+      "value": 45,
+      "x": -515.1624,
+      "y": -456.9891
+    },
+    {
+      "category": "名词",
+      "id": "20",
+      "name": "位于",
+      "symbolSize": 5.42299349240781,
+      "value": 44,
+      "x": -408.12122,
+      "y": -464.5048
+    },
+    {
+      "category": "名词",
+      "id": "21",
+      "name": "全国",
+      "symbolSize": 5.2060737527115,
+      "value": 44,
+      "x": -456.44113,
+      "y": -425.13303
+    },
+    {
+      "category": "名词",
+      "id": "22",
+      "name": "自治县",
+      "symbolSize": 4.55531453362256,
+      "value": 44,
+      "x": -459.1107,
+      "y": -362.5133
+    },
+    {
+      "category": "名词",
+      "id": "23",
+      "name": "四川省",
+      "symbolSize": 4.55531453362256,
+      "value": 43,
+      "x": -313.42786,
+      "y": -289.44803
+    },
+    {
+      "category": "动词",
+      "id": "24",
+      "name": "四川省阿坝藏族羌族自治州",
+      "symbolSize": 4.55531453362256,
+      "value": 42,
+      "x": 4.6313396,
+      "y": -273.8517
+    },
+    {
+      "category": "名词",
+      "id": "25",
+      "name": "超话",
+      "symbolSize": 4.55531453362256,
+      "value": 42,
+      "x": 82.80825,
+      "y": -203.1144
+    },
+    {
+      "category": "名词",
+      "id": "26",
+      "name": "非遗",
+      "symbolSize": 4.55531453362256,
+      "value": 41,
+      "x": 78.64646,
+      "y": -31.512747
+    },
+    {
+      "category": "名词",
+      "id": "27",
+      "name": "藏族",
+      "symbolSize": 4.55531453362256,
+      "value": 41,
+      "x": -81.46074,
+      "y": -204.20204
+    },
+    {
+      "category": "动词",
+      "id": "28",
+      "name": "历史",
+      "symbolSize": 4.33839479392625,
+      "value": 40,
+      "x": -225.73984,
+      "y": 82.41631
+    },
+    {
+      "category": "名词",
+      "id": "29",
+      "name": "祭祀",
+      "symbolSize": 4.33839479392625,
+      "value": 38,
+      "x": -385.6842,
+      "y": -20.206686
+    },
+    {
+      "category": "动词",
+      "id": "30",
+      "name": "传承",
+      "symbolSize": 4.12147505422993,
+      "value": 37,
+      "x": -403.92447,
+      "y": -197.69823
+    },
+    {
+      "category": "名词",
+      "id": "31",
+      "name": "阿坝州",
+      "symbolSize": 3.68763557483731,
+      "value": 36,
+      "x": -281.4253,
+      "y": -158.45137
+    },
+    {
+      "category": "名词",
+      "id": "32",
+      "name": "景区",
+      "symbolSize": 3.470715835141,
+      "value": 36,
+      "x": -122.41348,
+      "y": 210.37503
+    },
+    {
+      "category": "其他",
+      "id": "33",
+      "name": "真的",
+      "symbolSize": 3.25379609544469,
+      "value": 36,
+      "x": -234.6001,
+      "y": -113.15067
+    },
+    {
+      "category": "其他",
+      "id": "34",
+      "name": "文化遗产",
+      "symbolSize": 3.25379609544469,
+      "value": 35,
+      "x": -387.84915,
+      "y": 58.7059
+    },
+    {
+      "category": "名词",
+      "id": "35",
+      "name": "特色",
+      "symbolSize": 3.03687635574837,
+      "value": 35,
+      "x": -338.2307,
+      "y": 87.48405
+    },
+    {
+      "category": "名词",
+      "id": "36",
+      "name": "羌寨",
+      "symbolSize": 2.81995661605206,
+      "value": 34,
+      "x": -453.26874,
+      "y": 58.94648
+    },
+    {
+      "category": "名词",
+      "id": "37",
+      "name": "汶川县",
+      "symbolSize": 2.81995661605206,
+      "value": 34,
+      "x": -386.44904,
+      "y": 140.05937
+    },
+    {
+      "category": "动词",
+      "id": "38",
+      "name": "发生",
+      "symbolSize": 2.38611713665944,
+      "value": 34,
+      "x": -446.7876,
+      "y": 123.38005
+    },
+    {
+      "category": "动词",
+      "id": "39",
+      "name": "保护",
+      "symbolSize": 2.38611713665944,
+      "value": 33,
+      "x": 336.49738,
+      "y": -269.55914
+    }
+  ],
+  "links": [
+    {
+      "source": "12",
+      "target": "0"
+    },
+    {
+      "source": "27",
+      "target": "0"
+    },
+    {
+      "source": "5",
+      "target": "0"
+    },
+    {
+      "source": "27",
+      "target": "12"
+    },
+    {
+      "source": "11",
+      "target": "0"
+    },
+    {
+      "source": "12",
+      "target": "11"
+    },
+    {
+      "source": "27",
+      "target": "11"
+    },
+    {
+      "source": "12",
+      "target": "5"
+    },
+    {
+      "source": "27",
+      "target": "5"
+    },
+    {
+      "source": "7",
+      "target": "0"
+    },
+    {
+      "source": "6",
+      "target": "0"
+    },
+    {
+      "source": "23",
+      "target": "0"
+    },
+    {
+      "source": "23",
+      "target": "5"
+    },
+    {
+      "source": "1",
+      "target": "0"
+    },
+    {
+      "source": "11",
+      "target": "5"
+    },
+    {
+      "source": "3",
+      "target": "0"
+    },
+    {
+      "source": "10",
+      "target": "0"
+    },
+    {
+      "source": "4",
+      "target": "0"
+    },
+    {
+      "source": "27",
+      "target": "23"
+    },
+    {
+      "source": "23",
+      "target": "12"
+    },
+    {
+      "source": "8",
+      "target": "0"
+    },
+    {
+      "source": "23",
+      "target": "11"
+    },
+    {
+      "source": "2",
+      "target": "0"
+    },
+    {
+      "source": "8",
+      "target": "7"
+    },
+    {
+      "source": "22",
+      "target": "0"
+    },
+    {
+      "source": "18",
+      "target": "0"
+    },
+    {
+      "source": "20",
+      "target": "0"
+    },
+    {
+      "source": "14",
+      "target": "0"
+    },
+    {
+      "source": "22",
+      "target": "4"
+    },
+    {
+      "source": "2",
+      "target": "1"
+    },
+    {
+      "source": "24",
+      "target": "0"
+    },
+    {
+      "source": "24",
+      "target": "5"
+    },
+    {
+      "source": "24",
+      "target": "11"
+    },
+    {
+      "source": "24",
+      "target": "12"
+    },
+    {
+      "source": "24",
+      "target": "23"
+    },
+    {
+      "source": "27",
+      "target": "24"
+    },
+    {
+      "source": "9",
+      "target": "0"
+    },
+    {
+      "source": "13",
+      "target": "0"
+    },
+    {
+      "source": "27",
+      "target": "20"
+    },
+    {
+      "source": "16",
+      "target": "0"
+    },
+    {
+      "source": "28",
+      "target": "0"
+    },
+    {
+      "source": "25",
+      "target": "0"
+    },
+    {
+      "source": "15",
+      "target": "0"
+    },
+    {
+      "source": "20",
+      "target": "12"
+    },
+    {
+      "source": "10",
+      "target": "5"
+    },
+    {
+      "source": "20",
+      "target": "5"
+    },
+    {
+      "source": "5",
+      "target": "1"
+    },
+    {
+      "source": "12",
+      "target": "1"
+    },
+    {
+      "source": "5",
+      "target": "2"
+    },
+    {
+      "source": "37",
+      "target": "0"
+    },
+    {
+      "source": "37",
+      "target": "1"
+    },
+    {
+      "source": "32",
+      "target": "0"
+    },
+    {
+      "source": "38",
+      "target": "0"
+    },
+    {
+      "source": "20",
+      "target": "11"
+    },
+    {
+      "source": "35",
+      "target": "0"
+    },
+    {
+      "source": "27",
+      "target": "1"
+    },
+    {
+      "source": "33",
+      "target": "0"
+    },
+    {
+      "source": "16",
+      "target": "4"
+    },
+    {
+      "source": "26",
+      "target": "0"
+    },
+    {
+      "source": "19",
+      "target": "0"
+    },
+    {
+      "source": "22",
+      "target": "16"
+    },
+    {
+      "source": "23",
+      "target": "20"
+    },
+    {
+      "source": "5",
+      "target": "4"
+    },
+    {
+      "source": "30",
+      "target": "0"
+    },
+    {
+      "source": "31",
+      "target": "12"
+    },
+    {
+      "source": "6",
+      "target": "3"
+    },
+    {
+      "source": "31",
+      "target": "0"
+    },
+    {
+      "source": "11",
+      "target": "1"
+    },
+    {
+      "source": "12",
+      "target": "10"
+    },
+    {
+      "source": "23",
+      "target": "1"
+    },
+    {
+      "source": "5",
+      "target": "3"
+    },
+    {
+      "source": "15",
+      "target": "3"
+    },
+    {
+      "source": "34",
+      "target": "3"
+    },
+    {
+      "source": "27",
+      "target": "10"
+    },
+    {
+      "source": "14",
+      "target": "5"
+    },
+    {
+      "source": "38",
+      "target": "5"
+    },
+    {
+      "source": "21",
+      "target": "0"
+    },
+    {
+      "source": "9",
+      "target": "5"
+    },
+    {
+      "source": "39",
+      "target": "0"
+    },
+    {
+      "source": "14",
+      "target": "12"
+    },
+    {
+      "source": "32",
+      "target": "5"
+    },
+    {
+      "source": "6",
+      "target": "5"
+    },
+    {
+      "source": "22",
+      "target": "5"
+    },
+    {
+      "source": "23",
+      "target": "2"
+    },
+    {
+      "source": "34",
+      "target": "0"
+    },
+    {
+      "source": "32",
+      "target": "12"
+    },
+    {
+      "source": "38",
+      "target": "12"
+    },
+    {
+      "source": "17",
+      "target": "0"
+    },
+    {
+      "source": "9",
+      "target": "3"
+    },
+    {
+      "source": "23",
+      "target": "10"
+    },
+    {
+      "source": "37",
+      "target": "12"
+    },
+    {
+      "source": "32",
+      "target": "27"
+    },
+    {
+      "source": "38",
+      "target": "27"
+    },
+    {
+      "source": "24",
+      "target": "20"
+    },
+    {
+      "source": "19",
+      "target": "12"
+    },
+    {
+      "source": "28",
+      "target": "3"
+    },
+    {
+      "source": "36",
+      "target": "0"
+    },
+    {
+      "source": "12",
+      "target": "6"
+    },
+    {
+      "source": "16",
+      "target": "5"
+    },
+    {
+      "source": "27",
+      "target": "19"
+    }
+  ],
+  "categories": [
+    {
+      "name": "动词"
+    },
+    {
+      "name": "名词"
+    },
+    {
+      "name": "其他"
+    }
+  ]
+}
